@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSE Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #020617;
+    color: #e2e8f0;
+}
+
+/* BACKGROUND */
+body::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(2,6,23,0.95), rgba(2,6,23,0.95)), url('https://www.transparenttextures.com/patterns/cubes.png');
+    z-index: -1;
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    background: rgba(0,0,0,0.85);
+    border-bottom: 1px solid #0ea5e9;
+}
+
+nav h2 {
+    font-family: 'Orbitron';
+    color: #0ea5e9;
+}
+
+nav a {
+    color: #94a3b8;
+    margin-left: 20px;
+    text-decoration: none;
+    position: relative;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #0ea5e9;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* HERO */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 50px;
+    font-family: 'Orbitron';
+}
+
+.typing {
+    color: #0ea5e9;
+    border-right: 2px solid;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3s steps(20), blink 0.6s infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink {
+    50% { border-color: transparent }
+}
+
+.hero img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin-top: 20px;
+    border: 3px solid #0ea5e9;
+}
+
+/* SECTION */
+.section {
+    padding: 60px 10%;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 1s;
+}
+
+.section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+h2 {
+    color: #0ea5e9;
+    margin-bottom: 20px;
+    font-family: 'Orbitron';
+}
+
+/* CARDS */
+.card {
+    background: rgba(15,23,42,0.7);
+    padding: 20px;
+    border-radius: 12px;
+    margin: 15px 0;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(14,165,233,0.3);
+}
+
+/* SKILLS */
+.skills span {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 20px;
+    background: #020617;
+    border: 1px solid #0ea5e9;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #0ea5e9;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h2>&lt;Piyanshu Parate&gt;</h2>
+    <div>
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#strengths">Strengths</a>
+        <a href="#hobbies">Hobbies</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<section class="hero">
+    <h1>Hi, I'm <span class="typing">Piyanshu Parate</span></h1>
+    <p>Mechanical Engineering Student | Problem Solver</p>
+    <img src="piyanshu.jpeg">
+</section>
+
+<section class="section" id="about">
+    <h2>About Me</h2>
+    <div class="card">
+        I am a first-year Mechanical Engineering student with a strong 
+        interest in understanding how machines and systems work. I enjoy
+        learning new concepts, solving practical problems, and working on 
+        hands-on projects. I am eager to develop my technical skills and 
+        apply theoretical knowledge to real-world engineering challenges.
+
+        I enjoy learning both theoretical concepts and practical applications,
+        especially through hands-on activities like workshop practice, 
+        basic machining, and model-making. I have started building my foundation 
+        in core subjects such as engineering mechanics, thermodynamics, and material science,
+        while also developing basic skills in design software like SolidWorks and AutoCAD.
+
+        I am particularly interested in areas such as machine design, manufacturing processes,
+        and product development. I like solving problems, thinking creatively, and working in 
+        teams to come up with innovative solutions. Being a quick learner, I am always ready to 
+        adapt to new technologies and improve my technical and communication skills.
+
+        As a beginner in this field, I am focused on gaining knowledge, improving my practical exposure
+        and building a strong base that will help me grow into a skilled mechanical engineer in the future.
+
+    </div>
+</section>
+
+<section class="section" id="education">
+    <h2>Education</h2>
+    <div class="card">Bachelor of Engineering in Computer Engineering
+                      MIT Academy of Engineering, Pune
+                      2025 – Present
+                      Currently pursuing First Year in Mechanical Engineering
+                      Focus areas: I am focused on building a strong foundation in core mechanical engineering 
+                      concepts and developing skills in technical drawing and CAD tools like SolidWorks and AutoCAD.
+                      I am also interested in product design and practical problem-solving, with a goal to work on 
+                      real-life engineering solutions and improve my hands-on experience.</div>
+    <div class="card">Higher Secondary Education (Class XII)
+                      Royal Gondwana Public School, Nagpur
+                      2024 – 2025
+                      Completed with Science stream in CBSE boards (Physics, Chemistry, Mathematics)
+                      Built strong foundation in analytical and problem-solving skills</div>
+    <div class="card">Secondary Education (Class X)
+                      St Xavier's High School
+                      2022 – 2023
+                      Completed with strong academic performance with 85% in CBSE boards.
+                      Developed discipline, consistency, and learning habits</div>
+    <div class="card">Academic Achievements
+                      Secured 87 percentile in JEE Mains
+                      Appeared for JEE Advanced 2025 and successfully cleared it with 9k rank. 
+                      Demonstrated strong problem-solving and analytical ability</div>
+</section>
+
+<section class="section skills" id="skills">
+    <h2>Skills</h2>
+    <span>Technical Skills
+          Technical Drawing
+          Engineering Mechanics (Basics)
+          SolidWorks (Basic)
+          AutoCAD (Basic)
+          Manufacturing Processes (Basic Understanding)</span>
+    <span>Soft Skills
+          Communication
+          Teamwork
+          Time Management
+          Adaptability</span>
+</section>
+
+<section class="section" id="projects">
+    <h2>Projects</h2>
+    <div class="card">
+        <b>Mini Lathe Machine (Model)</b><br>
+        Designed and developed a small working/visual model of a lathe machine.
+        Learned about machine components like bed, spindle, chuck, and tool post
+        Understood basic turning operations
+    </div>
+    <div class="card">
+        <b>Screw Jack (3D Model)</b><br>
+        Created a 3D model of a screw jack using CAD software.
+        Studied working principle of screw mechanism
+        Learned how rotational motion converts into linear motion
+    </div>
+</section>
+
+<section class="section" id="achievements">
+    <h2>Achievements</h2>
+    <div class="card">Participated in technical workshops</div>
+    <div class="card">Completed multiple programming exercises in C and Python</div>
+    <div class="card">Worked effectively in team-based projects</div>
+    <div class="card">Built multiple real-world projects</div>
+    <div class="card">Completed assignments and practicals on time</div>
+</section>
+
+<section class="section" id="strengths">
+    <h2>Strengths</h2>
+    <div class="card">Problem-solving mindset</div>
+    <div class="card">Quick learner and adaptable</div>
+    <div class="card">Strong analytical thinking</div>
+    <div class="card">Team collaboration and communication</div>
+</section>
+
+<section class="section" id="hobbies">
+    <h2>Hobbies</h2>
+    <div class="card">Exploring new technologies</div>
+    <div class="card">Learning about stock markets</div>
+    <div class="card">Creative designing</div>
+</section>
+
+<section class="section" id="contact">
+    <h2>Contact</h2>
+    <div class="card">
+        Email: piyanshuparate261@gmail.com<br>
+        Phone: 9373966428<br>
+    </div>
+</section>
+
+<footer>
+    © 2026 Piyanshu Parate | Portfolio
+</footer>
+
+<script>
+const sections = document.querySelectorAll('.section');
+window.addEventListener('scroll', () => {
+    sections.forEach(sec => {
+        const top = window.scrollY;
+        const offset = sec.offsetTop - 300;
+        if (top > offset) {
+            sec.classList.add('show');
+        }
+    });
+});
+</script>
+
+</body>
+</html>
